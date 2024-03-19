@@ -1,6 +1,5 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../../first-script/crm/Resources/crmApp.robot
 
 *** Variables ***
 ${BROWSER} =    edge

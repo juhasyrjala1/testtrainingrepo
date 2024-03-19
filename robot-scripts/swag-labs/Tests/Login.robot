@@ -54,6 +54,11 @@ DDT - Try to login by using invalid password
     SwagLabsApp.Attempt Login    ${INVALID_PASSWORD_USER}
     SwagLabsApp.Verify Login Page Error Message    ${INVALID_PASSWORD_USER.ExpectedErrorMessage}
 
+DDT - Try to login with locked out user
+    SwagLabsApp.Go to "Landing" Page
+    SwagLabsApp.Attempt Login    ${LOCKED_OUT_USER_PASSWORD_USER}
+    SwagLabsApp.Verify Login Page Error Message    ${LOCKED_OUT_USER_PASSWORD_USER.ExpectedErrorMessage}
+
 
 #New way to test multiple login scenarios
 Invalid login scenarios should display correct error messages
@@ -61,3 +66,4 @@ Invalid login scenarios should display correct error messages
     ${BLANK_CREDENTIALS_USER}
     ${UNREGISTERED_USER}
     ${INVALID_PASSWORD_USER}
+    ${LOCKED_OUT_USER_PASSWORD_USER}

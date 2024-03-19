@@ -1,17 +1,12 @@
 *** Settings ***
 Documentation    This suite tests Front Office Site
 Resource    ../../Resources/FrontOffice/FrontOfficeApp.robot    #necessary for lower level keywords in tests
-Resource    ../../Resources/commonWeb.robot     #necessary for Setup & teardown level keywords in tests    
+Resource    ../../Resources/Common/commonWeb.robot     #necessary for Setup & teardown level keywords in tests 
+Resource    ../..//Data/InputData.robot    #necessary for lower level keywords in tests   
 Test Setup        commonWeb.Begin Web Test
 Test Teardown     commonWeb.End Web Test
 
-
-# robot -d results tests\Front_Office.robot
-
-*** Variables ***
-${BROWSER} =    chrome
-${URL} =    https://automationplayground.com/front-office/
-
+# robot -d C:\Development\Results tests\FrontOffice/Front_Office.robot
 
 *** Test Cases ***
 

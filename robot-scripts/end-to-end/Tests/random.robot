@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    This suite tests Front Office Site
-Resource    ../Resources/FrontOfficeApp.robot    #necessary for lower level keywords in tests
-Resource    ../Resources/commonWeb.robot     #necessary for Setup & teardown level keywords in tests    
+Resource    ../Resources/FrontOffice/FrontOfficeApp.robot    #necessary for lower level keywords in tests
+Resource    ../Resources/Common/commonWeb.robot     #necessary for Setup & teardown level keywords in tests    
 #Test Setup        commonWeb.Begin Web Test
 #Test Teardown     commonWeb.End Web Test
 
