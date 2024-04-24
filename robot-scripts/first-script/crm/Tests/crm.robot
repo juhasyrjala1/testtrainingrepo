@@ -1,10 +1,11 @@
 *** Settings ***
 Documentation    This suite adds new customers 
+Library    QWeb     # Import library
+#Library    SeleniumLibrary
 Resource    C:/development/robot-scripts/first-script/crm/Resources/crmApp.robot     #necessary for lower level keywords in tests
 Resource    C:/development/robot-scripts/first-script/crm/Resources/commonApp.robot     #necessary for Setup & teardown level keywords in tests
 #Resource    ${USER_LIST_FILE}
 Resource    C:\\development\\TA\\UserList.robot
-
 Test Setup        commonApp.Begin Web Test
 Test Teardown     commonapp.End Web Test
 
@@ -21,6 +22,11 @@ ${GENDER} =           male
 
 
 *** Test Cases ***
+Just A Random Test
+    QWeb.OpenBrowser    https://automationplayground.com/crm/login.html    chrome
+    QWeb.VerifyText     Login
+
+    
 Home Page should load
     [Documentation]        Test the login  
     [Tags]                 1002    Smoke    Home

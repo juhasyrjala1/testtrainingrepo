@@ -50,6 +50,6 @@ Click Checkout Button
 
 Verify Products Found In Cart Page
     ${remove_buttons}=    Browser.Get Element Count    ${REMOVE_BUTTON_LOCATOR}
-    ${status}=    Run Keyword And Return Status    Should Not Be Empty    ${remove_buttons}
+    ${status}=    Run Keyword And Return Status    Should Be True ${remove_buttons} > 0
     Run Keyword If    not ${status}    Fail    No any items found!
     
