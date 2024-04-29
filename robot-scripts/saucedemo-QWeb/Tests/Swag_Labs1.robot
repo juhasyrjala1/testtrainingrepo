@@ -91,3 +91,14 @@ Should not be able to checkout without buyer information
     SwagLabsApp.Continue To Checkout With Buyer's Information    ${TEST_BUYER1}
 
 
+Reset App State
+    SwagLabsApp.Go to "Landing" Page
+    SwagLabsApp.Log In With Valid Credentials    ${VALID_LOGIN_USERNAME}    ${VALID_LOGIN_PASSWORD}
+    SwagLabsApp.Add Item In To Cart    ${SAUCE_LAB_BACKPACK}
+    SwagLabsApp.Add Item In To Cart    ${SAUCE_LAB_BIKE_LIGHT}
+    SwagLabsApp.How Many Items Should Be In Cart    2
+    SwagLabsApp.Click "Reset App State" Menu Item
+    SwagLabsApp.Navigate To Shopping Cart
+    SwagLabsApp.How Many Items Should Be In Cart    0
+
+

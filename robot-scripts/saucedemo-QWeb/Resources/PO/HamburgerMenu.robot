@@ -5,6 +5,7 @@ Library    QWeb
 ${TOPNAV_TEAM_LINK} =       //*[@id="bs-example-navbar-collapse-1"]/ul/li[5]/a
 ${LOGOUT_LINK} =            //*[@id="logout_sidebar_link"]
 ${HAMBURGER_NAVIGATION} =   //*[@id="react-burger-menu-btn"]
+${RESET_APP_STATE} =        Reset App State
 
 
 *** Keywords ***
@@ -18,3 +19,6 @@ Open Hamburger Menu Options
 
 Click Logout
     QWeb.ClickElement    ${LOGOUT_LINK}
+
+Click "Reset App State"
+    QWeb.ClickText    ${RESET_APP_STATE}

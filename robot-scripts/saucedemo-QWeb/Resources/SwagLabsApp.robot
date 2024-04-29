@@ -8,6 +8,7 @@ Resource    ./PO/ProductItem.robot       #necessary for Page Object level keywor
 Resource    ./PO/Login.robot       #necessary for Page Object level keywords in tests
 Resource    ./PO/Cart.robot       #necessary for Page Object level keywords in tests 
 Resource    ./PO/Checkout.robot       #necessary for Page Object level keywords in tests 
+Resource    ./PO/Inventory.robot       #necessary for Page Object level keywords in tests 
 
 
 
@@ -97,6 +98,10 @@ Test Multiple Login scenarios
     Go to "Landing" Page
     Attempt Login    ${Credentials}
     Verify Login Page Error Message    ${Credentials.ExpectedErrorMessage}
+
+Click "Reset App State" Menu Item
+    HamburgerMenu.Open Hamburger Menu Options
+    HamburgerMenu.Click "Reset App State"
     
 
 

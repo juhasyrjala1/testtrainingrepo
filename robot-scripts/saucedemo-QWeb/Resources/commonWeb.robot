@@ -14,3 +14,6 @@ Begin Web Test
 
 End Web Test
     QWeb.Close Browser
+
+Refresh Page 
+    RefreshPage
