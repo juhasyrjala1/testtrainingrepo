@@ -102,3 +102,9 @@ Reset App State
     SwagLabsApp.How Many Items Should Be In Cart    0
 
 
+Verify All Hamburger Menu Items Are Listed
+    SwagLabsApp.Go to "Landing" Page
+    SwagLabsApp.Log In With Valid Credentials    ${VALID_LOGIN_USERNAME}    ${VALID_LOGIN_PASSWORD}
+    SwagLabsApp.Open Hamburger Menu And Verify All Items
+    SwagLabsApp.Close Hamburger Menu
+

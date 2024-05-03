@@ -102,6 +102,15 @@ Test Multiple Login scenarios
 Click "Reset App State" Menu Item
     HamburgerMenu.Open Hamburger Menu Options
     HamburgerMenu.Click "Reset App State"
+
+
+Open Hamburger Menu And Verify All Items
+    HamburgerMenu.Open Hamburger Menu Options
+    HamburgerMenu.Verify All Items
+
+
+Close Hamburger Menu
+    HamburgerMenu.Close Hamburger Menu
     
 
 
